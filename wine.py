@@ -2,15 +2,10 @@ import keras
 from keras.models import Sequential
 from keras.layers import Dense, Dropout
 
-import numpy as np
+import numpy
 import os.path
 
-
-if not os.path.isfile("../../iris.npy"):
-  pos = np.loadtxt('../../iris.csv', delimiter=',', dtype=np.float32)
-  np.save('../../iris.npy', pos);
-else:
-  pos = np.load('../../iris.npy')
+dataset = numpy.loadtxt("pima-indians-diabetes.csv", delimiter=",")
 
 #Read in white wine data
 #white = read_csv("iris.csv", sep=';')
